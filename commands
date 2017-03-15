@@ -1,0 +1,112 @@
+Working with the Domino Server Console and the Notes OSGi Console
+http://www.informit.com/articles/article.aspx?p=1833573&seqNum=3
+
+OSGI
+
+>tell http osgi ss
+-----> All bundles OSGI
+
+>tell http osgi ss com.ibm.xsp.extlib 
+- 27 ACTIVE      com.ibm.xsp.extlib_9.0.1.v00_17_20160428-0214
+
+
+DOTS
+
+>tell dots run UpdateWidgetsTask
+>tell dots taskinfo UpdateWidgetsTask
+
+
+> tell dots tasklist
+- [DOTS]
+- [DOTS] ID: UpdateWidgetsTask
+- [DOTS] Description: null
+- [DOTS] Run on start: false
+- [DOTS] Run every: 1 - day
+- [DOTS] Last run: Tue Mar 14 09:39:11 CET2017
+ 
+> tell dots help
+- [DOTS] ---Controlling the OSGi framework---
+- [DOTS] launch - start the OSGi Framework
+- [DOTS] shutdown - shutdown the OSGi Framework
+- [DOTS] close - shutdown and exit
+- [DOTS] exit - exit immediately (System.exit)
+- [DOTS] init - uninstall all bundles
+- [DOTS] setprop <key>=<value> - set the OSGi property
+
+- [DOTS] ---Controlling Bundles---
+- [DOTS] install - install and optionally start bundle from the given URL
+- [DOTS] uninstall - uninstall the specified bundle(s)
+- [DOTS] start - start the specified bundle(s)
+- [DOTS] stop - stop the specified bundle(s)
+- [DOTS] refresh - refresh the packages ofthe specified bundles
+- [DOTS] update - update the specified bundle(s)
+
+- [DOTS] ---Displaying Status---
+- [DOTS] status [-s [<comma separated list of bundle states>]  [<segment of bsn>]] - display installed bundles and registered services
+- [DOTS] ss [-s [<comma separated list of bundle states>]  [<segment of bsn>]] - display installed bundles (short status)
+- [DOTS] services [filter] - display registered service details
+- [DOTS] packages [<pkgname> <id> <location>] - display imported/exported package details
+- [DOTS] bundles [-s [<comma separated list of bundle states>]  [<segment of bsn>]] - display details for all installed bundles
+- [DOTS] bundle (<id> <location>) - display details for the specified bundle(s)
+- [DOTS] headers (<id> <location>) - printbundle headers
+
+- [DOTS] ---Extras---
+- [DOTS] exec <command> - execute a command in a separate process and wait
+- [DOTS] fork <command> - execute a command in a separate process
+- [DOTS] gc - perform a garbage collection
+- [DOTS] getprop  [ name ] - displays the system properties with the given name, or all of them.
+
+- [DOTS] ---Controlling Start Level---
+- [DOTS] sl [<id> <location>] - display the start level for the specified bundle, or for the framework if no bundle specified
+- [DOTS] setfwsl <start level> - set the framework start level
+- [DOTS] setbsl <start level> (<id> <location>) - set the start level for the bundle(s)
+- [DOTS] setibsl <start level> - set the initial bundle start level
+
+- [DOTS] ---Controlling the Profiling---
+- [DOTS] profilelog - Display & flush the profile log messages
+
+- [DOTS] ---Eclipse Runtime commands---
+- [DOTS] diag - Displays unsatisfied constraints for the specified bundle(s).
+- [DOTS] enableBundle - enable the specified bundle(s)
+- [DOTS] disableBundle - disable the specified bundle(s)
+- [DOTS] disabledBundles - list disabled bundles in the system
+
+- [DOTS] ---Extension Registry Commands---
+- [DOTS] ns [-v] [name] - display extension points in the namespace; add -v to display extensions
+- [DOTS] pt [-v] uniqueExtensionPointId - display the extension point and extensions; add -v to display config elements
+- [DOTS]
+- [DOTS] ---Application Admin Commands---
+- [DOTS] activeApps - lists all running application IDs
+- [DOTS] apps - lists all installed application IDs
+- [DOTS] lockApp <application id> - locks the specified application ID
+- [DOTS] schedApp <application id> <time filter> [true false] - schedules the specified application id to launch at the specified time filter.  Can optionally make the schedule recurring.
+- [DOTS] startApp <application id> - starts the specified application ID
+- [DOTS] stopApp <application id> - stops the specified running application ID
+- [DOTS] unlockApp <application id> - unlocks the specified application ID
+- [DOTS] unschedApp <application id> - unschedules all scheduled applications with the specified application ID
+- [DOTS]
+
+- [DOTS] ---Domino OSGi Tasklet Container Commands---
+- [DOTS] close/exit: Close the current instance of the Domino OSGi Tasklet Container
+- [DOTS] tasklist: Display list of OSGi server tasks
+- [DOTS] aliases: List of tasklet aliases and their description
+- [DOTS] run [taskid]: Run the task once specified by the task id
+- [DOTS] taskinfo [taskid]: Display detailed information about the task
+- [DOTS] taskstatus: Display information about the tasks being run
+- [DOTS] cancel [taskNumber]: Cancel the current task
+- [DOTS] dumpstack [-a]: Display the stacktraces for the running thread (-a for all threads)
+
+- [DOTS] ---Domino OSGi Tasklet Container Profile Management Commands---
+- [DOTS] showprofile: Show Info about the current profile
+- [DOTS] profileCreate [profileName]: Create a new profile
+
+- [DOTS] --Domino OSGi Logging Management commands---
+- [DOTS] loggingGroups : Display a list of all the logging groups
+- [DOTS] loggingGroupInfo [group]: Display information about a logging group
+- [DOTS] setLoggingGroupLevel [level]: Setthe level of a logging group
+- [DOTS]
+
+- [DOTS] ---OSGi core commands---
+- [DOTS] ss : display installed bundles (short status)
+- [DOTS] start - start the specified bundle(s)
+- [DOTS] stop - stop the specified bundle(s)
